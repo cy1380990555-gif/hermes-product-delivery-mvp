@@ -1,0 +1,31 @@
+project_id: ""
+title: ""
+status: INTAKE   # INTAKE→CLARIFYING→PRODUCING→RULE_REVIEW→PERSONA_TEST→REVISION_REQUIRED→PRD→DELIVERED
+iteration: 0
+max_iterations: 2
+
+context:
+  target_user: ""
+  user_problem: ""
+  product_goal: ""
+  core_scenario: ""
+  in_scope: []
+  out_of_scope: []
+  constraints: []
+  assumptions: []
+
+artifacts:
+  product_brief:     { status: missing, version: null, path: "artifacts/01-product-brief.md" }
+  product_solution:  { status: missing, version: null, path: "artifacts/02-product-solution.md" }
+  user_flow:         { status: missing, version: null, path: "artifacts/03-user-flow.md" }
+  prototype:         { status: missing, version: null, path: "artifacts/04-prototype.html" }
+  lite_prd:          { status: missing, version: null, path: "artifacts/05-lite-prd.md" }
+
+gates:
+  rule_review:        pending
+  primary_persona:    pending
+  edge_persona:       pending
+  final_acceptance:   pending
+
+issues: []
+decisions_required: []
