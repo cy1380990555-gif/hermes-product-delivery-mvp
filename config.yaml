@@ -1,0 +1,37 @@
+# Hermes Agent - Product Delivery MVP Configuration
+
+# 1. Sub-agent Profiles Definition
+agent_profiles:
+  pm_orchestrator:
+    model: "gpt-4o"  # Or your primary routing LLM
+    system_prompt_file: "agents/pm_orchestrator.md"
+    allowed_tools: ["delegate_task", "file", "terminal"]
+    
+  product_agent:
+    model: "gpt-4o-mini"
+    system_prompt_file: "agents/product_agent.md"
+    allowed_tools: ["file"]
+    
+  ux_agent:
+    model: "gpt-4o"
+    system_prompt_file: "agents/ux_agent.md"
+    allowed_tools: ["file", "terminal"]
+    
+  reviewer_agent:
+    model: "gpt-4o-mini"
+    system_prompt_file: "agents/reviewer_agent.md"
+    allowed_tools: ["file"]
+    
+  persona_agent:
+    model: "gpt-4o-mini"
+    system_prompt_file: "agents/persona_agent.md"
+    allowed_tools: ["file"]
+
+# 2. Delegation Policies
+delegation:
+  default_profile: "restricted"
+  profiles:
+    restricted:
+      allowed_tools: ["file"]
+    privileged:
+      allowed_tools: ["file", "terminal"]
